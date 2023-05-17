@@ -125,4 +125,4 @@
 نادیده گرفتن یکسری فایل ها و دایرکتوری ها توسط git باید در فایل gitignore. تعریف شود.  
 
 > <code>touch .gitignore</code>  
-> <code>git add ./git commit -m "create gitignire file"</code>  
+> <code>git add ./git commit -m "create gitignire file"</code>   
