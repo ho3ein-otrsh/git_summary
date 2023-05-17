@@ -52,11 +52,11 @@
 دیدن تاریخچه commit ها
 
 > <code>git log</code>  
-> <code>git log --online</code>  
+> <code>git log --oneline</code>  
 > <code>git log --stat</code>  
 
-نمایش **HEAD** در log نشان دهنده آخرین commit انجام شده است.
-
+نمایش **HEAD** در log نشان دهنده آخرین commit انجام شده است.  
+</br>  
 ## کار با branch ها
 
 <div align="center">
@@ -77,10 +77,26 @@
 > <code>git checkout -b test_branch</code> 
 
 حذف branch   
+برای اجازه حذف به branch که ادغام نشده باید از D- استفاده کرد.  
 > <code>git checkout master</code>   
+> <code>git branch -d test_branch</code>  
 > <code>git branch -D test_branch</code>  
 
 تغییر نام branch  
 > <code>git branch -m new_branch new_branch2</code>  
 
 ادغام دو branch  
+ابتدا وارد branch اصلی می شویم و branch فرعی را با آن ادغام می کنیم.  
+
+> <code>git checkout master </code>   
+> <code>git merge develop </code>  
+
+نکته : اگر قبل از تعویض  branch تغییرات آن را commit نکنیم آن تغییرات به branch دیگر منتقل می شود. (کار غلط)  
+</br>
+## برگشت به نسخه قبل از پروژه  
+
+برگشت به نسخه خاصی از پروژه و مرور کدها (قابل تعویض و تغییر نیست).  
+> <code>git log --oneline </code>   
+> <code>git checkout hash_code_log </code>
+> <code>git log --oneline </code> 
+> <code>git checkout master </code>     
