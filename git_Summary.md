@@ -97,6 +97,24 @@
 
 برگشت به نسخه خاصی از پروژه و مرور کدها (قابل تعویض و تغییر نیست).  
 > <code>git log --oneline </code>   
-> <code>git checkout hash_code_log </code>
-> <code>git log --oneline </code> 
-> <code>git checkout master </code>     
+> <code>git checkout <commit_id> </code>  
+> <code>git log --oneline </code>  
+> <code>git checkout master </code>  
+
+حذف commit و تغییرات مرتبط با آن (قابل بازگشت است) :
+<div align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREslOV3MOQDtRqG21waIy_t9lHL0WQTDBlTeCxK-gTrCdHl9ZYXzb6e4JjTFQpAmRLUNE&usqp=CAU" alt="git revert" style="width:auto;">  
+</div>  
+
+> <code>git log --oneline </code>   
+> <code>git revert <commit_id> </code>  
+
+دستور reset سه حالت دارد که استفاده از آن نیاز به دقت دارد.  
+<div align="center">
+  <img src="https://www.bogotobogo.com/DevOps/SCM/Git/images/Hard_Reset/three-resets.png" alt="git reverse" style="width:auto;">
+</div>  
+
+> <code>git log --oneline </code>   
+> <code>git reset <commit_id> --soft</code>  
+> <code>git reset <commit_id>  --mixed</code>  
+> <code>git reset <commit_id>  --hard</code>  
