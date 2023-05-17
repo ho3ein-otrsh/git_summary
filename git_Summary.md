@@ -101,7 +101,9 @@
 > <code>git log --oneline </code>  
 > <code>git checkout master </code>  
 
-حذف commit و تغییرات مرتبط با آن (قابل بازگشت است) :
+حذف تاثیرات مرتبط با یک commit (خود commit حذف نمی شود) :  
+استفاده از دستور revert در log های قدیمی ممکن است باعث ایجاد ارور confilict شود.  
+بهتر است دستور revert را در باره ی log های جدید انجام دهیم.  
 <div align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREslOV3MOQDtRqG21waIy_t9lHL0WQTDBlTeCxK-gTrCdHl9ZYXzb6e4JjTFQpAmRLUNE&usqp=CAU" alt="git revert" style="width:auto;">  
 </div>  
@@ -118,3 +120,9 @@
 > <code>git reset <commit_id> --soft</code>  
 > <code>git reset <commit_id>  --mixed</code>  
 > <code>git reset <commit_id>  --hard</code>  
+
+## کار با فایل gitignore  
+نادیده گرفتن یکسری فایل ها و دایرکتوری ها توسط git باید در فایل gitignore. تعریف شود.  
+
+> <code>touch .gitignore</code>  
+> <code>git add ./git commit -m "create gitignire file"</code>  
